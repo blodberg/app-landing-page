@@ -73,7 +73,7 @@
     /* ---------- top bar ---------- */
     .topbar {
       display: flex; align-items: center; justify-content: space-between;
-      padding: 1rem 0;
+      padding-top: 1rem; padding-bottom: 1rem;
     }
     .wordmark {
       display: flex; align-items: center; gap: 0.6rem;
@@ -91,7 +91,7 @@
     .theme-toggle:hover { color: var(--text); border-color: var(--accent); }
 
     /* ---------- policy content ---------- */
-    .policy { padding: 2.5rem 0 4rem; }
+    .policy { padding-top: 2.5rem; padding-bottom: 4rem; }
     .policy .kicker {
       display: inline-block; font-size: 0.8rem; font-weight: 600;
       letter-spacing: 0.06em; text-transform: uppercase;
@@ -120,6 +120,10 @@
     }
     @media (max-width: 700px) {
       .policy-card { padding: 1.6rem 1.4rem; }
+    }
+    @media (max-width: 480px) {
+      .wrap { padding: 0 1.5rem; }
+      .policy-card { padding: 1.5rem 1.25rem; }
     }
 
     footer {
