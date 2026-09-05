@@ -1,238 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="TripCache — Privacy Policy" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://tripcache.app/privacypolicy/" />
-  <meta property="og:site_name" content="TripCache" />
-  <title>Privacy Policy &mdash; TripCache</title>
-  <style>
-    :root {
-      --bg: #fbfbfd;
-      --card: #ffffff;
-      --text: #17181c;
-      --secondary: #5d6068;
-      --accent: #4845ec;
-      --accent-2: #7b2ff2;
-      --tint: rgba(72, 69, 236, 0.07);
-      --border: #e6e7ee;
-      --shadow: 0 10px 30px rgba(23, 24, 40, 0.08);
-      --link: #3a38d6;
-      --link-visited: #6a5bb8;
-    }
-
-    :root[data-theme="dark"] {
-      --bg: #14151c;
-      --card: #1d1f2a;
-      --text: #eff0f5;
-      --secondary: #a2a5b3;
-      --accent: #8b88ff;
-      --accent-2: #b07aff;
-      --tint: rgba(139, 136, 255, 0.1);
-      --border: #2c2e3c;
-      --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-      --link: #a5a3ff;
-      --link-visited: #9a8ad8;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root:not([data-theme="light"]) {
-        --bg: #14151c;
-        --card: #1d1f2a;
-        --text: #eff0f5;
-        --secondary: #a2a5b3;
-        --accent: #8b88ff;
-        --accent-2: #b07aff;
-        --tint: rgba(139, 136, 255, 0.1);
-        --border: #2c2e3c;
-        --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-        --link: #a5a3ff;
-        --link-visited: #9a8ad8;
-      }
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-        'Helvetica Neue', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-      transition: background-color 0.25s ease, color 0.25s ease;
-    }
-
-    a:link { color: var(--link); }
-    a:visited { color: var(--link-visited); }
-
-    .wrap { max-width: 960px; margin: 0 auto; padding: 0 1.25rem; }
-
-    /* ---------- top bar ---------- */
-    .topbar {
-      display: flex; align-items: center; justify-content: space-between;
-      padding-top: 1rem; padding-bottom: 1rem;
-    }
-    .wordmark {
-      display: flex; align-items: center; gap: 0.6rem;
-      font-weight: 700; font-size: 1.05rem; color: var(--text) !important;
-      text-decoration: none;
-    }
-    .wordmark img { width: 30px; height: 30px; border-radius: 22.5%; }
-    .topbar-right { display: flex; align-items: center; gap: 0.75rem; }
-    .theme-toggle {
-      background: var(--card); color: var(--secondary);
-      border: 1px solid var(--border); border-radius: 99px;
-      padding: 0.35rem 0.85rem; font-size: 0.82rem; font-family: inherit;
-      cursor: pointer; transition: color 0.2s, border-color 0.2s;
-    }
-    .theme-toggle:hover { color: var(--text); border-color: var(--accent); }
-
-    /* ---------- policy content ---------- */
-    .policy { padding-top: 2.5rem; padding-bottom: 4rem; }
-    .policy .kicker {
-      display: inline-block; font-size: 0.8rem; font-weight: 600;
-      letter-spacing: 0.06em; text-transform: uppercase;
-      color: var(--accent); background: var(--tint);
-      padding: 0.25rem 0.7rem; border-radius: 99px; margin-bottom: 1.1rem;
-    }
-    .policy h1 {
-      font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.15;
-      letter-spacing: -0.02em; margin: 0 0 0.5rem;
-    }
-    .policy .updated { color: var(--secondary); font-size: 0.9rem; margin: 0 0 2rem; }
-    .policy-card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 20px; box-shadow: var(--shadow);
-      padding: 2rem 2.2rem;
-    }
-    .policy-card h2 {
-      font-size: 1.2rem; letter-spacing: -0.01em;
-      margin: 1.75rem 0 0.6rem;
-    }
-    .policy-card h2:first-child { margin-top: 0; }
-    .policy-card p { margin: 0 0 0.75rem; color: var(--secondary); }
-    .policy-card p:last-child { margin-bottom: 0; }
-    .policy-card hr {
-      border: none; border-top: 1px solid var(--border); margin: 1.75rem 0;
-    }
-    @media (max-width: 700px) {
-      .policy { padding-top: 3.5rem; padding-bottom: 3rem; }
-      .policy-card { padding: 1.6rem 1.4rem; margin-bottom: 1.5rem; }
-    }
-    @media (max-width: 480px) {
-      .wrap { padding: 0 1.5rem; }
-      .policy { padding-top: 3.5rem; padding-bottom: 2.5rem; }
-      .policy-card { padding: 1.5rem 1.25rem; margin-bottom: 2rem; }
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2rem 0 2.5rem; font-size: 0.88rem; color: var(--secondary);
-    }
-    footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
-  </style>
-</head>
-<body>
-
-  <div class="wrap topbar">
-    <a class="wordmark" href="/">
-      <img src="/tripcache-icon.png" alt="" width="30" height="30">
-      TripCache
-    </a>
-    <div class="topbar-right">
-      <button id="theme-toggle" class="theme-toggle" onclick="cycleTheme()" aria-label="Switch color theme">◐ Auto</button>
-    </div>
-  </div>
-
-  <!-- ============ PRIVACY POLICY ============ -->
-  <section class="wrap policy">
-<!--   <span class="kicker">Legal</span>-->
-    <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: July 2026</p>
-
-    <div class="policy-card">
-      <p>
-        TripCache and its developer take your privacy very seriously. TripCache does not
-        collect, transmit or distribute your data.
-      </p>
-
-      <hr>
-
-      <h2>Data Storage</h2>
-      <p>
-        Your trips, expenses, and any locations you attach to them are stored on your device
-        and, if iCloud is turned on, synced through your own private iCloud account. None of
-        it is sent to the developer or to any third party. TripCache has no accounts and
-        never asks for your name or email address.
-      </p>
-
-      <hr>
-
-      <h2>Location</h2>
-      <p>
-        Location access is optional. When you choose to add a location to an expense,
-        TripCache requests your current location once, so that you do not have to search for
-        the place manually. That location is stored alongside the expense on your device and
-        in your iCloud account, and is never transmitted to the developer. Location is never
-        accessed in the background. You may decline or revoke access at any time in iOS
-        Settings, and the rest of the app continues to work without it.
-      </p>
-
-      <hr>
-
-      <h2>Analytics</h2>
-      <p>
-        Beyond the optional anonymous debugging information provided by Apple, TripCache
-        does not use any analytics tools, tracking technologies or ad frameworks.
-      </p>
-
-      <hr>
-
-      <h2>Contact</h2>
-      <p>
-        If you have any questions or concerns about any of the above, please contact
-        <a href="mailto:support@tripcache.app">support@tripcache.app</a>.
-      </p>
-    </div>
-  </section>
-
-  <footer>
-    <div class="wrap">
-      <span>&copy; 2026 Orion Studios. All rights reserved.</span>
-      <a href="/">Back to Home</a>
-    </div>
-  </footer>
-
-  <script>
-    /* Theme: cycles Auto -> Light -> Dark. Persists across visits when storage is available. */
-    const THEMES = ['auto', 'light', 'dark'];
-    const LABELS = { auto: '◐ Auto', light: '☀ Light', dark: '☾ Dark' };
-
-    function getSavedTheme() {
-      try { return localStorage.getItem('theme') || 'auto'; } catch (e) { return 'auto'; }
-    }
-
-    function applyTheme(theme) {
-      if (theme === 'auto') {
-        document.documentElement.removeAttribute('data-theme');
-      } else {
-        document.documentElement.setAttribute('data-theme', theme);
-      }
-      const btn = document.getElementById('theme-toggle');
-      if (btn) btn.textContent = LABELS[theme];
-      try { localStorage.setItem('theme', theme); } catch (e) { /* preview environments may block storage */ }
-    }
-
-    function cycleTheme() {
-      const current = getSavedTheme();
-      const next = THEMES[(THEMES.indexOf(current) + 1) % THEMES.length];
-      applyTheme(next);
-    }
-
-    applyTheme(getSavedTheme());
-  </script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="TripCache — Privacy Policy" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://tripcache.app/privacypolicy/" />
+        <meta property="og:site_name" content="TripCache" />
+        <title>Privacy Policy &mdash; TripCache</title>
+        <style>
+            :root {
+                --bg: #fbfbfd;
+                --card: #ffffff;
+                --text: #17181c;
+                --secondary: #5d6068;
+                --accent: #4845ec;
+                --accent-2: #7b2ff2;
+                --tint: rgba(72, 69, 236, 0.07);
+                --border: #e6e7ee;
+                --shadow: 0 10px 30px rgba(23, 24, 40, 0.08);
+                --link: #3a38d6;
+                --link-visited: #6a5bb8;
+            }
+            
+            :root[data-theme="dark"] {
+                --bg: #14151c;
+                --card: #1d1f2a;
+                --text: #eff0f5;
+                --secondary: #a2a5b3;
+                --accent: #8b88ff;
+                --accent-2: #b07aff;
+                --tint: rgba(139, 136, 255, 0.1);
+                --border: #2c2e3c;
+                --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+                --link: #a5a3ff;
+                --link-visited: #9a8ad8;
+            }
+            
+            @media (prefers-color-scheme: dark) {
+                :root:not([data-theme="light"]) {
+                    --bg: #14151c;
+                    --card: #1d1f2a;
+                    --text: #eff0f5;
+                    --secondary: #a2a5b3;
+                    --accent: #8b88ff;
+                    --accent-2: #b07aff;
+                    --tint: rgba(139, 136, 255, 0.1);
+                    --border: #2c2e3c;
+                    --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+                    --link: #a5a3ff;
+                    --link-visited: #9a8ad8;
+                }
+            }
+            
+            * { box-sizing: border-box; }
+            
+            body {
+                margin: 0;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                'Helvetica Neue', sans-serif;
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.65;
+                transition: background-color 0.25s ease, color 0.25s ease;
+            }
+            
+            a:link { color: var(--link); }
+            a:visited { color: var(--link-visited); }
+            
+            .wrap { max-width: 960px; margin: 0 auto; padding: 0 1.25rem; }
+            
+            /* ---------- top bar ---------- */
+            .topbar {
+                display: flex; align-items: center; justify-content: space-between;
+                padding-top: 1rem; padding-bottom: 1rem;
+            }
+            .wordmark {
+                display: flex; align-items: center; gap: 0.6rem;
+                font-weight: 700; font-size: 1.05rem; color: var(--text) !important;
+                text-decoration: none;
+            }
+            .wordmark img { width: 30px; height: 30px; border-radius: 22.5%; }
+            .topbar-right { display: flex; align-items: center; gap: 0.75rem; }
+            .theme-toggle {
+                background: var(--card); color: var(--secondary);
+                border: 1px solid var(--border); border-radius: 99px;
+                padding: 0.35rem 0.85rem; font-size: 0.82rem; font-family: inherit;
+                cursor: pointer; transition: color 0.2s, border-color 0.2s;
+            }
+            .theme-toggle:hover { color: var(--text); border-color: var(--accent); }
+            
+            /* ---------- policy content ---------- */
+            .policy { padding-top: 2.5rem; padding-bottom: 4rem; }
+            .policy .kicker {
+                display: inline-block; font-size: 0.8rem; font-weight: 600;
+                letter-spacing: 0.06em; text-transform: uppercase;
+                color: var(--accent); background: var(--tint);
+                padding: 0.25rem 0.7rem; border-radius: 99px; margin-bottom: 1.1rem;
+            }
+            .policy h1 {
+                font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.15;
+                letter-spacing: -0.02em; margin: 0 0 0.5rem;
+            }
+            .policy .updated { color: var(--secondary); font-size: 0.9rem; margin: 0 0 2rem; }
+            .policy-card {
+                background: var(--card); border: 1px solid var(--border);
+                border-radius: 20px; box-shadow: var(--shadow);
+                padding: 2rem 2.2rem;
+            }
+            .policy-card h2 {
+                font-size: 1.2rem; letter-spacing: -0.01em;
+                margin: 1.75rem 0 0.6rem;
+            }
+            .policy-card h2:first-child { margin-top: 0; }
+            .policy-card p { margin: 0 0 0.75rem; color: var(--secondary); }
+            .policy-card p:last-child { margin-bottom: 0; }
+            .policy-card hr {
+                border: none; border-top: 1px solid var(--border); margin: 1.75rem 0;
+            }
+            @media (max-width: 700px) {
+                .policy { padding-top: 3.5rem; padding-bottom: 3rem; }
+                .policy-card { padding: 1.6rem 1.4rem; margin-bottom: 1.5rem; }
+            }
+            @media (max-width: 480px) {
+                .wrap { padding: 0 1.5rem; }
+                .policy { padding-top: 3.5rem; padding-bottom: 2.5rem; }
+                .policy-card { padding: 1.5rem 1.25rem; margin-bottom: 2rem; }
+            }
+            
+            footer {
+                border-top: 1px solid var(--border);
+                padding: 2rem 0 2.5rem; font-size: 0.88rem; color: var(--secondary);
+            }
+            footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+        </style>
+    </head>
+    <body>
+        
+        <div class="wrap topbar">
+            <a class="wordmark" href="/">
+                <img src="/tripcache-icon.png" alt="" width="30" height="30">
+                    TripCache
+            </a>
+            <div class="topbar-right">
+                <button id="theme-toggle" class="theme-toggle" onclick="cycleTheme()" aria-label="Switch color theme">◐ Auto</button>
+            </div>
+        </div>
+        
+        <!-- ============ PRIVACY POLICY ============ -->
+        <section class="wrap policy">
+            <!--   <span class="kicker">Legal</span>-->
+            <h1>Privacy Policy</h1>
+            <p class="updated">Last updated: August 2026</p>
+            
+            <div class="policy-card">
+                <p>
+                TripCache and its developer take your privacy very seriously. TripCache does not
+                collect, transmit or distribute your data.
+                </p>
+                
+                <hr>
+                
+                <h2>Data Storage</h2>
+                <p>
+                Your trips, expenses, and any locations you attach to them are stored on your device
+                and, if iCloud is turned on, synced through your own private iCloud account. None of
+                it is sent to the developer or to any third party. TripCache has no accounts and
+                never asks for your name or email address.
+                </p>
+                
+                <hr>
+                
+                <h2>Photos</h2>
+                <p>Adding a photo is optional. TripCache uses the system photo picker, which lets you choose a photo without giving the app access to your full photo library. The selected photo is resized and re-encoded without embedded metadata, including photo location data, before it is stored with the expense. You can remove it at any time by editing the expense.
+                </p>
+                
+                <hr>
+                
+                <h2>Location</h2>
+                <p>
+                Location access is optional. When you choose to add a location to an expense,
+                TripCache requests your current location once, so that you do not have to search for
+                the place manually. That location is stored alongside the expense on your device and
+                in your iCloud account, and is never transmitted to the developer. Location is never
+                accessed in the background. You may decline or revoke access at any time in iOS
+                Settings, and the rest of the app continues to work without it.
+                </p>
+                
+                <hr>
+                
+                <h2>Analytics</h2>
+                <p>
+                Beyond the optional anonymous debugging information provided by Apple, TripCache
+                does not use any analytics tools, tracking technologies or ad frameworks.
+                </p>
+                
+                <hr>
+                
+                <h2>Contact</h2>
+                <p>
+                If you have any questions or concerns about any of the above, please contact
+                <a href="mailto:support@tripcache.app">support@tripcache.app</a>.
+                </p>
+            </div>
+        </section>
+        
+        <footer>
+            <div class="wrap">
+                <span>&copy; 2026 Orion Studios. All rights reserved.</span>
+                <a href="/">Back to Home</a>
+            </div>
+        </footer>
+        
+        <script>
+            /* Theme: cycles Auto -> Light -> Dark. Persists across visits when storage is available. */
+            const THEMES = ['auto', 'light', 'dark'];
+            const LABELS = { auto: '◐ Auto', light: '☀ Light', dark: '☾ Dark' };
+            
+            function getSavedTheme() {
+                try { return localStorage.getItem('theme') || 'auto'; } catch (e) { return 'auto'; }
+            }
+            
+            function applyTheme(theme) {
+                if (theme === 'auto') {
+                    document.documentElement.removeAttribute('data-theme');
+                } else {
+                    document.documentElement.setAttribute('data-theme', theme);
+                }
+                const btn = document.getElementById('theme-toggle');
+                if (btn) btn.textContent = LABELS[theme];
+                try { localStorage.setItem('theme', theme); } catch (e) { /* preview environments may block storage */ }
+            }
+            
+            function cycleTheme() {
+                const current = getSavedTheme();
+                const next = THEMES[(THEMES.indexOf(current) + 1) % THEMES.length];
+                applyTheme(next);
+            }
+            
+            applyTheme(getSavedTheme());
+        </script>
+    </body>
 </html>
